@@ -6,7 +6,8 @@ const UserCard = ({ user }) => {
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title">{`${user.firstName} ${user.lastName}`}</h2>
-        <p>About of the user!</p>
+        {user.age && <p>{user.age + ", " + user?.gender}</p>}
+        <p>{user?.about || "About of the user!"}</p>
         <div className="card-actions">
           <button className="btn btn-primary">Ignore</button>
           <button className="btn btn-secondary">Interested</button>
