@@ -9,8 +9,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  console.log(user, "loggedInUser");
-
   const handleLogout = async () => {
     try {
       const response = await axios.post(
@@ -42,10 +40,7 @@ const Navbar = () => {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src={user?.photoUrl || ""}
-                />
+                <img alt="photo" src={user?.photoUrl} />
               </div>
             </div>
             <ul

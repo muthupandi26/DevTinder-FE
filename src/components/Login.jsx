@@ -26,7 +26,6 @@ const Login = () => {
       if (response.data.firstName) {
         dispatch(addUser(response.data));
         navigate("/");
-        console.log(response.data.firstName, "loginResponse");
       }
     } catch (err) {
       setError(err.response.data);
