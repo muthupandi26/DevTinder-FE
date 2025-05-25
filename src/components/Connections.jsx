@@ -11,14 +11,10 @@ const Connections = () => {
       });
 
       setConnectionList(response.data.data);
-
-      console.log(response, "ConnectionResponse");
     } catch (err) {
       console.log(err);
     }
   };
-
-  console.log(connectionList, "connectionList");
 
   useEffect(() => {
     getConnections();
@@ -32,7 +28,7 @@ const Connections = () => {
         {connectionList.length > 0 &&
           connectionList.map((data) => {
             return (
-              <li className="list-row">
+              <li key={data._id} className="list-row">
                 <div>
                   <img
                     alt="photo"
