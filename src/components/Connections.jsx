@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Connections = () => {
   const [connectionList, setConnectionList] = useState([]);
@@ -41,6 +42,11 @@ const Connections = () => {
                   <div className="text-xs uppercase font-semibold opacity-60">
                     {data?.about}
                   </div>
+                </div>
+                <div>
+                  <Link to={"/chat/" + data._id}>
+                    <button className="btn btn-info">Chat</button>
+                  </Link>
                 </div>
               </li>
             );

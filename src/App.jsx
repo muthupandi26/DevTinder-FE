@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import Login from "./components/Login";
 import Connections from "./components/Connections";
 import Requests from "./components/Requests";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/connections" element={<Connections />} />
             <Route path="/requests" element={<Requests />} />
+            <Route path="/chat/:toUserId" element={<Chat />} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>
