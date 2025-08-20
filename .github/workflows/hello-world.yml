@@ -1,0 +1,16 @@
+name: Hello World Workflow
+
+on:
+  push: # Run this workflow when code is pushed
+    branches: [master]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3 # Gets your repo code
+
+      - name: Say Hello
+        run: echo "🎉 Hello World from GitHub Actions!"
